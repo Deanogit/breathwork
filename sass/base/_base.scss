@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  border: 1px dotted grey;
+}
+
+html {
+  // Defines what 1rem is, font-size by default is 16px
+  font-size: 43.75%; // 1rem = 7px; 7/16 = .4375 x 100 = 43.75%
+
+  // 1rem = 10px; 10/16 = .625 x 100 = 62.5%
+
+  // Media querys
+
+  // @include respond(phone) {
+  //   font-size: 50%;
+  // } // not needed if screen is smaller than 900px
+  // @include respond(tab-land) {
+  //   // width < 1200px?
+  //   font-size: 56.25%; // 1 rem = 9px, 9/16 = .5625 x 100 = 56.25%
+  // }
+  // @include respond(tab-port) {
+  //   // width < 900px?
+  //   font-size: 50%; // 1 rem = 8px, 8/16 = .5 x 100 = 50%
+  // }
+
+  @include respond(phone-small) {
+    // width < 200px?
+    font-size: 43.75%; // 1 rem = 7px , 7/16 = .4375 x 100 = 43.75%
+  }
+  @include respond(phone) {
+    // width < 200px?
+    font-size: 50%; // 1 rem = 8px , 8/16 = .5 x 100 = 50%
+  }
+  @include respond(tab-port) {
+    // width < 400px?
+    font-size: 56.25%; // 1 rem = 9px , 9/16 = .5625 x 100 = 56.25%
+  }
+  @include respond(tab-land) {
+    // width < 900px?
+    font-size: 62.5%; // 1 rem = 10px , 10/16 = .625 x 100 = 62.5%
+  }
+  @include respond(desktop) {
+    // width < 1200px?
+    font-size: 70%; // 1 rem = 11.2px , 11.2/16 = .70 x 100 = 70%
+  }
+  @include respond(big-desktop) {
+    // width < 1800px?
+    font-size: 80%; // 1 rem = 12px , 12/16 = .75 x 100 = 75%
+  }
+}
+
+body {
+  box-sizing: border-box;
+  overflow: hidden;
+
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(150, 162, 150),
+    rgba(rgb(90, 121, 90), 1)
+  );
+}

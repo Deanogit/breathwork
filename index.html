@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="breathe app guided breathing exercises to relax focus and unwind"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Open+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Breathwork app</title>
+  </head>
+  <body>
+    <!-- Styling the body, could be fixed, 100vh, 100% width, top 0 left 0, -->
+    <!-- What does the header contain?
+          -logo 
+          - nav:
+              - calm 4-6 extended exhale
+              - focus 4-4 equal breathing
+              - relax 4-7-8 breathing
+              - stress 4-4-4-4 box breathing 
+          -->
+
+    <!-- seems like this html can be refactored: header - nav - h1 & what is -->
+    <header class="header">
+      <nav class="header__nav">
+        <h1 class="header__logo heading-primary">Breathwork</h1>
+        <button class="btn__info">What is Breathwork?</button>
+
+        <!-- <button class="navigation__link">calm</button>
+
+        <button class="navigation__link">focus</button>
+
+        <button class="navigation__link">relax</button>
+
+        <button class="navigation__link">stress</button> -->
+      </nav>
+    </header>
+
+    <main>
+      <!-- this will be a flex container -->
+      <section class="section-circle">
+        <!-- container to hold the intro/select/circle -->
+        <div class="container">
+          <!-- <div class="circle__question-box"> -->
+          <div class="intro">
+            <h2 class="heading-secondary">
+              Reset with a short breathing exercise personalised to your needs
+            </h2>
+            <p class="paragraph">Select a duration below</p>
+            <div class="intro__duration">
+              <button class="intro__duration-link link--1">1 min</button>
+              <button class="intro__duration-link link--2">2 mins</button>
+              <button class="intro__duration-link link--3">3 mins</button>
+              <button class="intro__duration-link link--4">5 mins</button>
+              <button class="intro__duration-link link--5">10 mins</button>
+            </div>
+            <button class="intro__duration-begin">Begin</button>
+          </div>
+          <div class="info">
+            <h2 class="header">What is Breathwork?</h2>
+            <p>
+              Breathwork is a term for various breathing practices in which the
+              conscious control of breathing is said to influence a person's
+              mental, emotional or physical state, with a therapeutic effect.
+            </p>
+            <p>
+              Breathwork may be helpful for relaxation and stress in a similar
+              way to meditation.
+            </p>
+            <p>
+              Further research is needed to prove claims that breathwork may be
+              beneficial in improving stress and mental health.
+            </p>
+          </div>
+          <!-- <div class="select">
+            <p class="select__header">Select a practice</p>
+            <div class="select__duration">
+              <a href="#" class="select__duration-link">Calm</a>
+              <a href="#" class="select__duration-link">Focus</a>
+              <a href="#" class="select__duration-link">Relax</a>
+              <a href="#" class="select__duration-link">Stress</a>
+            </div>
+            <a href="#" class="select__duration-begin">Begin</a>
+          </div> -->
+          <div class="circle">
+            <p class="circle__inhale">Inhale through your nose</p>
+            <p class="circle__hold">Hold</p>
+            <p class="circle__exhale">Exhale through your mouth</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <!-- <p class="footer__credit">credit</p> -->
+      <p class="footer__credit">built by <strong>Dean</strong></p>
+    </footer>
+    <!-- footer:
+      credit to balance
+      link to creator
+     -->
+  </body>
+</html>
+
+<!-- To do list -->
+
+<!-- 
+  
+  - Reset styling of button in header__nav called btn__info which will action _info
+  - link logo to index.html or reset state in JS
+  - set the paragraph 
+  - create utility classes - margin-bottom--sm / --md / --lg / --xl
+  - reset animations: header__logo btn__info in header__nav in header
+
+  - build logic in (and create) script.js
+  - link script.js in head
+
+  - create starting state 
+  - create variable to store duration
+  - create function to take duration and submit on begin or pop up 'select practice duration'
+  - create function to change to select when duration is submitted
+  - create function to store select 
+  - create function to initiate practise with duration & select
+  - create function to countdown 
+  - create function to reset state on countdown finish
+
+  - create a git repo and push to github
+
+
+
+
+
+
+
+
+ -->

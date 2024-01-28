@@ -1,0 +1,12 @@
+.footer {
+  height: 10vh;
+  width: 100%;
+  @include flex-center;
+  gap: 7rem;
+
+  animation: fade-in 10s ease-out;
+
+  // &__credit {
+  //   // display: inline-block;
+  // }
+}

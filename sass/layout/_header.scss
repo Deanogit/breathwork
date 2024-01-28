@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+  min-width: 100%;
+  justify-content: space-around;
+
+  @include respond(tab-port) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 4rem;
+  }
+
+  &__logo {
+    @include flex-center;
+    padding-top: 1rem;
+
+    // animation: reveal-left 3.5s ease-out;
+  }
+
+  &__nav {
+    // visibility: hidden;
+    // @include flex-center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    // animation: reveal-right 4s ease-out;
+
+    @include respond(phone) {
+      gap: 3rem;
+    }
+  }
+}
+
+.btn__info {
+  text-decoration: none;
+  letter-spacing: 0.2rem;
+  transition: all 2s;
+
+  &:link,
+  &:visited {
+    color: whitesmoke;
+  }
+
+  &:hover,
+  &:active {
+    transform: scale(1.2);
+    text-shadow: 0 1rem 3rem rgba(black, 0.2);
+  }
+}

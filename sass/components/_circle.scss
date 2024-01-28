@@ -1,0 +1,141 @@
+.circle {
+  @include flex-center;
+  height: 20rem;
+  width: 20rem;
+
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+
+  @include respond(phone) {
+    height: 30rem;
+    width: 30rem;
+  }
+  position: relative;
+
+  border-radius: 50%;
+  //   background-color: rgb(42, 61, 58);
+  //   background-color: whitesmoke;
+  //   box-shadow: 0 1rem 3rem rgba(black, 0.17);
+  //   background-image: linear-gradient(
+  //     to bottom,
+  //     whitesmoke 50%,
+  //     rgb(42, 61, 58) 50%
+  //   );
+  background-size: 200% 200%;
+  color: white;
+
+  //   animation: background 8s infinite;
+
+  //   responsive hack
+  //   height: auto;
+  //   width: 25%;
+  //   padding-top: 25%;
+
+  &__inhale {
+    @include flex-center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    text-align: center;
+    // margin-top: -40%;
+    // Relax
+    // animation: relax-hold 19s infinite;
+    // animation: stress-hold 16s infinite;
+    // opacity: 0;
+
+    // Calm
+    // animation: nose 10s 4;
+    // Focus
+    // animation: nose 8s infinite;
+    // Relax
+    // animation: relax-nose 19s 4;
+    //  Stress
+    // animation: stress-nose 16s 4;
+  }
+
+  &__hold {
+    @include flex-center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    // margin-top: -40%;
+    // Relax
+    // animation: relax-hold 19s infinite;
+    // animation: stress-hold 16s 4;
+    // opacity: 0;
+  }
+
+  &__exhale {
+    @include flex-center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    text-align: center;
+    // margin-top: -40%;
+    // Relax
+    // animation: relax-hold 19s infinite;
+    // animation: stress-mouth 16s 4;
+    // opacity: 0;
+
+    // Calm
+    // animation: mouth 10s 4;
+    // Focus
+    // animation: mouth 8s infinite;
+    // Relax
+    // animation: relax-mouth 19s 4;
+    //  Stress
+    // animation: stress-mouth 16s 4;
+  }
+
+  //   Calm
+  //   animation: calm 10s infinite;
+
+  //   Focus
+  //   animation: focus 8s infinite;
+
+  // Relax
+  //   animation: relax 19s infinite;
+
+  //  Stress
+  //   animation: stress 16s infinite;
+
+  //   &::before {
+  //     content: 'Inhale through your nose';
+  //     text-align: center;
+  //     @include flex-center;
+  //     margin-top: -60%;
+  //     opacity: 0;
+  // Calm
+  // animation: nose 10s 4;
+  // Focus
+  // animation: nose 8s 4;
+  // Relax
+  // animation: relax-nose 19s 4;
+  //  Stress
+  // animation: stress-nose 16s 4;
+  //   }
+  //   &::after {
+  //     content: 'Exhale out through your mouth';
+  //     text-align: center;
+  //     @include flex-center;
+  //     margin-top: -20%;
+  //     opacity: 0;
+  // Calm
+  // animation: nose 10s 4;
+  // Focus
+  // animation: mouth 8s 4;
+  // Relax
+  // animation: relax-mouth 19s 4;
+  //  Stress
+  // animation: stress-mouth 16s 4;
+  //   }
+}
+
+// animate shapes to move according to in or out, start from bottom up to top, then switch color, top to bottom, repeat.

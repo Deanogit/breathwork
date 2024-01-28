@@ -1,0 +1,77 @@
+// I'll be using flex mostly so
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Probably wont need this...
+// @mixin clearfix {
+//   &::after {
+//     content: '';
+//     display: table;
+//     clear: both;
+//   }
+// }
+
+// Probs won't need this...
+// @mixin center {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
+
+// MEDIA QUERY MANAGER
+
+/*
+0 - 600px: Phone
+600 - 900px: Tablet portrait
+900 -1200px: Tablet landscape
+[1200-1800px] is where our normal styles apply
+1800px + : Big desktop
+
+Conver pixels to em, 1 em = 16px therefore 200px / 16px = 12.5em 
+Conver pixels to em, 1 em = 16px therefore 400px / 16px = 25em 
+Conver pixels to em, 1 em = 16px therefore 600px / 16px = 37.5em 
+Conver pixels to em, 1 em = 16px therefore 900px / 16px = 36.25em 
+Conver pixels to em, 1 em = 16px therefore 1200px / 16px = 75em 
+Conver pixels to em, 1 em = 16px therefore 1800px / 16px = 112.5em 
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media (min-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media (min-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone {
+    @media (min-width: 25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone-small {
+    @media (min-width: 12.5em) {
+      @content;
+    }
+  }
+}
